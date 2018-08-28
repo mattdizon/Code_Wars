@@ -11,44 +11,67 @@ Each calculation consist of exactly one operation and two numbers
 The most outer function represents the left operand, the most inner function represents the right operand
 Divison should be integer division,
 =end
-def zero(n = 0)
-    return 0 if
-    print n
+def zero(op="")
+  return 0 if op == ""
+  check(0,op[1].to_i,op[0])
 end
-def one(n = 1)
-    return n
+def one(op="")
+  return 1 if op == ""
+  check(1,op[1].to_i,op[0])
 end
-def two(n = 2)
-    return n
+def two(op="")
+  return 2 if op == ""
+  check(2,op[1].to_i,op[0])
 end
-def three(n = 3)
-    return n
+def three(op="")
+  return 3 if op == ""
+  check(3,op[1].to_i,op[0])
 end
-def four(n = 4)
-    return n
+def four(op="")
+  return 4 if op == ""
+  check(4,op[1].to_i,op[0])
 end
-def five(n = 5)
-    return n
+def five(op="")
+  return 5 if op == ""
+  check(5,op[1].to_i,op[0])
 end
-def six(n = 6)
-    return n
+def six(op="")
+  return 6 if op == ""
+  check(6,op[1].to_i,op[0])
 end
-def seven(n = 7)
-    return n
+def seven(op="")
+  return 7 if op == ""
+  check(7,op[1].to_i,op[0])
 end
-def eight(n = 8)
-    return n
+def eight(op="")
+  return 8 if op == ""
+  check(8,op[1].to_i,op[0])
 end
-def nine(n = 9)
-    return n
+def nine(op="")
+  return 9 if op == ""
+  check(9,op[1].to_i,op[0])
 end
 def plus(num,num2="")
   return "+#{num}" if num2 == ""
   return num + num2
 end
-def minus
+def minus(num,num2="")
+  return "-#{num}" if num2 == ""
+  return num - num2
 end
-def times(v= 4)
+def times(num,num2="")
+  return "*#{num}" if num2 == ""
+  return num * num2
 end
-def divided_by
+def divided_by(num,num2="")
+  return "/#{num}" if num2 == ""
+  return num.to_i / num2.to_i
+end
+def check (num1, num2, op)
+  case op
+  when "+" ; plus(num1,num2)
+  when "-" ; minus(num1,num2)
+  when "*" ; times(num1,num2)
+  when "/" ; divided_by(num1,num2)
+  end
 end
