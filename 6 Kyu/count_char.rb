@@ -4,5 +4,4 @@ def count_chars(s)
     hash[x] += 1
   end
   hash
-
 end

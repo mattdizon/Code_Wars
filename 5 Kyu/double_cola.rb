@@ -28,21 +28,19 @@ def whoIsNext(names, r)
     n = names.length
     if r < n
           names[r-1]
-
     else
     i = 0
     f = n * (2 ** i)
     r -= f
-        while r > 0
-            i += 1
-            f = n * (2 ** i)
-            r -= f
-        end
+    while r > 0
+        i += 1
+        f = n * (2 ** i)
+        r -= f
+    end
     r += (n * (2 ** i))
-     names[(r / (2 ** i))]
+    names[(r / (2 ** i))]
 end
 
 
 
 end
-#whoIsNext(["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"], 6)

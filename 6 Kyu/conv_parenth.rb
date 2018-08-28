@@ -23,7 +23,6 @@ def duplicate_encode(word)
             new_word << '('
         end
     end
-
-     print new_word
+    new_word
 end
 #duplicate_encode("rEcede")

@@ -20,9 +20,9 @@ def domain_name(url)
         s += 1
     end
     if urls[0] == "w" &&  urls[1] == "w" && urls[2] == "w" && urls[3] == "."
-        puts urls[(4..-1)]
+         urls[(4..-1)]
     else
-        puts urls
+         urls
 
     end
 

@@ -18,6 +18,6 @@ def valid_parentheses(string)
     elsif arr.length == 0
         bool = true
     end
-    print bool
+    bool
 end
 #valid_parentheses(")test")

@@ -10,8 +10,7 @@ def find_it(seq)
         hash[x] += 1
     end
     hash.each do |x,y|
-        print x.to_i if y % 2 != 0
+        x.to_i if y % 2 != 0
     end
-  #your code here
 end
 #find_it([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5])

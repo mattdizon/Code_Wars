@@ -15,7 +15,7 @@ def find_it(arr)
     end
     odd_hash.each do |x,y|
         if y % 2 != 0
-            print "#{x} \n"
+            return "#{x} \n"
         end
     end
 end

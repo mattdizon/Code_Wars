@@ -19,6 +19,6 @@ def narc?(num)
     a.each_char do |x|
         result += x.to_i**a.size
     end
-print result == num ? true : false
+ result == num ? true : false
 end
 #narc?(153)

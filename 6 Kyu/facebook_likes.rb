@@ -31,9 +31,7 @@ def likes(names)
                 x << "#{names[0]}"
             end
         end
-
     end
      x
-  #your code here
 end
 #likes(["Alex", "Jacob", "Mark", "Max", "Alex", "Jacob", "Mark", "Max"])

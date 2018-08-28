@@ -14,7 +14,7 @@ def solution(number)
 
         end
     end
-    print sum
+    sum
 end
 #solution(10)
 #3,6,9
