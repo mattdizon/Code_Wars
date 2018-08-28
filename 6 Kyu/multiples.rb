@@ -18,22 +18,3 @@ def solution(number)
 end
 #solution(10)
 #3,6,9
-def display_board()
-    puts "   |   |   ";
-    puts " -----------";
-    puts "   |   |   ";
-    puts " -----------";
-    puts "   |   |   ";
-end
-#display_board();
-
-
-def introduction(name)
-  puts "Hi, my name is #{name}."
-end
-
-def introduction_with_language( name, language)
-     puts "Hi my name is #{name} and I am learning to program in #{language}."
-end
-
-introduction_with_language("matt" "python")
