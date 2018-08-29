@@ -22,35 +22,48 @@ C          100              str = 279 roman = DC => 179 => DCC => 79 DCC and so 
 D          500
 M          1,000
 
-input:  A: int
-        B: str
-outputs A: str
-        B: int
-process: A: store RomanNumerals in a hash with the number being the key and
-letter being value => read the number and determine its length take the first element of the number
-
-
-
+new approach
+take the number and subtract its difference to find the app letter
+insert letter and update number to be the difference taken
+at the end of the loop reduce letters acc to roman shorthand
 =end
-def solution(number)
-roman = {1 => 'I',5 => 'V',10 => 'X',50=> 'L',100 => 'C',500 => 'D',1000 => 'M'}
+class RomanNumerals
+    ROMAN_NUM = { M: 1000,D: 500, C: 100,
+                    L: 50, X: 10,V: 5,I: 1}
+    NUM_ROMAN = { IIII: :IV, XXXX: :XL,
+                    CCCC: :CD, VIV:  :IX,
+                    LXL:  :XC, DCD:  :CM}
+def self.to_roman(number)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    str = ""
+    ROMAN_NUM.each do |x,y|
+        while number >= y
+            str << x.to_s
+            number -= y
+        end
+    end
+    NUM_ROMAN.each_pair do |from, to|
+        str.gsub! from.to_s, to.to_s
+    end
+    print str
 
 end
+
+# part 2 converting roman to num
+# do the complete opposite expand roman
+# and add all the respective values together
+def self.from_roman(str)
+
+    roman = str.upcase
+    i = 0
+    NUM_ROMAN.each do |x,y|
+        roman.gsub! y.to_s, x.to_s
+    end
+    roman.each_char do |c|
+      i += ROMAN[ c.upcase.intern ]
+    end
+    print i
+
+  end
+end
+print RomanNumerals.to_roman(1990)

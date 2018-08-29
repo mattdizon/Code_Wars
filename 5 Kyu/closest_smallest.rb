@@ -54,7 +54,7 @@ def closest(str)
     x = 0
     new_arr = []
     same = []
-    outside = []
+
     arr.each do |x|
         s = 0
         x.each_char do |y|
@@ -77,7 +77,6 @@ def closest(str)
         if new_arr[0] == new_arr[1]
             same = weight.each_index.select { |i| weight[i] == x }
             new_arr[1] = [x, same[1], arr[same[1]].to_i]
-            outside = same
         end
     end
  print new_arr
