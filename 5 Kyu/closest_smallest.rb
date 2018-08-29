@@ -6,8 +6,8 @@ Output: an array of two arrays, each subarray in the following format:
     [number-weight, index in strng of the corresponding number,
     original corresponding number instrng]]
 
-two numbers are "close" if the difference of their weights is small.
-For each number in strng calculate its "weight" and then find two numbers of strng that have:
+    two numbers are "close" if the difference of their weights is small.
+    For each number in strng calculate its "weight" and then find two numbers of strng that have:
     the smallest difference of weights ie that are the closest
     with the smallest weights
     and with the smallest indices (or ranks, numbered from 0) in strng
@@ -33,12 +33,18 @@ For each number in strng calculate its "weight" and then find two numbers of str
     they are not the closest.
     Here the smallest difference is 0 and in the result the indexes are in ascending order.
 
-If n == 0, `closest("") should return []
+    `If n == 0, `closest("") should return []
 
-return the two weights with the smallest weight difference along with their
+    return the two weights with the smallest weight difference along with their
     respective indice from the original array and the number at that indice
     if multiple differences are equal print the ones that appear earlier in the
     original array
+
+    process: convert string to array => use array to make weight array
+    => sort the weights & use search method to find smallest difference
+    => return the 2 weights => find the index of the weights in the orginal
+     weight arrays if they are equal find all indexes and use the next index found
+
 =end
 def closest(str)
     arr = str.split(" ")
@@ -74,7 +80,7 @@ def closest(str)
             outside = same
         end
     end
- new_arr
+ print new_arr
 end
 closest("103 123 4444 99 2000")    # [[2, 4, 2000], [4, 0, 103]]
 closest( "80 71 62 53")        #[[8, 0, 80], [8, 1, 71]]
