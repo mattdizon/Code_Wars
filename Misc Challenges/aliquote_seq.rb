@@ -46,7 +46,7 @@ def aliquot_sequence(a,b)
     end
     print arr
 end
-aliquot_sequence(10,4)
+
 
 
 def aliq_sum(a)
@@ -54,7 +54,7 @@ def aliq_sum(a)
     sum = 0
     while i < a
         if a % i == 0
-            a += 1
+            sum += 1
         end
         i += 1
     end
@@ -68,6 +68,6 @@ def aliq_seq(a,b)
         arr << aliq_sum(i)
         i = aliq_sum(i)
     end
-    arr
+    puts arr
 end
-aliq_seq(10,4)
+aliq_seq(7,4)
