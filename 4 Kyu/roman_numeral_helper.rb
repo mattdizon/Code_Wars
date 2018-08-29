@@ -45,7 +45,7 @@ def self.to_roman(number)
     NUM_ROMAN.each_pair do |from, to|
         str.gsub! from.to_s, to.to_s
     end
-    print str
+     str
 
 end
 
@@ -60,9 +60,9 @@ def self.from_roman(str)
         roman.gsub! y.to_s, x.to_s
     end
     roman.each_char do |c|
-      i += ROMAN[ c.upcase.intern ]
+      i += ROMAN_NUM[ c.upcase.intern ]
     end
-    print i
+     i
 
   end
 end
